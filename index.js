@@ -103,6 +103,8 @@ del.addEventListener("click", function(){
 })
 
 equals.addEventListener("click", function(){
+    if (display.textContent == "") {
+        return;
     let result = display.textContent.replaceAll("x", "*").replaceAll("÷", "/");
     result = eval(result);
     result = Math.round(result * 100000000) / 100000000;
